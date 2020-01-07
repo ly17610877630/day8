@@ -4,20 +4,18 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.liyi.cms.pojo.User;
-
 public interface BaseDao<T> {
 	//查询 模糊
-	List<User> select(User user);
+	List<T> select(T t);
 	
 	//回显 查询一条数据
-	User selectById(Integer id);
+	T selectById(Integer id);
 	
 	//添加
-	int insert(User user);
+	int insert(T t);
 		
 	//修改
-	int update(User user);
+	int update(T t);
 		
 	//删除
 	int delete(@Param("ids")String ids);

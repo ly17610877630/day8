@@ -20,7 +20,7 @@ public class UserTest {
 	
 	@Test
 	public void select() {
-		List<User> list = userDao.select(null);
+		List<User> list = userDao.select(new User());
 		System.out.println(list);
 	}
 	
